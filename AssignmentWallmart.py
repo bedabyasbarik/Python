@@ -1,6 +1,6 @@
 #how many days close was less than 60 dollar?
 import pandas as pd
-df=pd.read_csv(r'walmart_stock.csv')
+df=pd.read_csv(r'D:\dataScienceClass\PandaPractice\walmart_stock.csv')
 df[df['Close']<60]['Date'].count()
 
 #max and min of volume  column
@@ -17,7 +17,7 @@ c=df[['Date','High']].groupby('Date').max()
 
 
 
-df=pd.read_csv(r'walmart_stock.csv')
+df=pd.read_csv(r'D:\dataScienceClass\PandaPractice\walmart_stock.csv')
 for i in range(df['Date'].size):
      df['Date'].loc[i]=df['Date'].loc[i].split('-')[1]
 d=df[['Date','Close']].groupby('Date').mean()
